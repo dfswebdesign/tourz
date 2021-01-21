@@ -336,3 +336,86 @@ a {
 }
 
 /* ********************** End of Feature Section ********************** */
+
+/* ********************** Gallery Section ********************** */
+.gallery {
+  background: var(--darkGrey);
+}
+.gallery-img-container {
+  position: relative;
+  background: var(--primaryColor);
+}
+.gallery-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2.5rem;
+  transform: translate(-50%, -50%); /*allows the icon to sit in the center*/
+  color: var(--mainWhite);
+  cursor: pointer;
+  transition: var(--mainTransition);
+  opacity: 0;
+}
+.gallery-img {
+  transition: var(--mainTransition);
+}
+.gallery-img-container:hover .gallery-img {
+  opacity: 0.5;
+}
+.gallery-img-container:hover .gallery-icon {
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  .gallery-center {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery-img-container {
+    flex: 0 0 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .gallery-img-container {
+    flex: 0 0 33.3%;
+  }
+}
+
+/* ********************** End of Gallery Section ********************** */
+
+/* ********************** Deals Section ********************** */
+.input-group {
+  width: 80vw;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+}
+.form-control {
+  flex: 1 1 auto;
+}
+.form-control,
+.btn-submit {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: var(--mainSpacing);
+  background: transparent;
+  text-transform: uppercase;
+  outline: none;
+  border: 2px solid var(--primaryColor);
+}
+::placeholder {
+  font-family: "lato", sans-serif;
+  color: var(--mainBlack);
+}
+.btn-submit {
+  border-left: none;
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+.btn-submit:hover {
+  color: var(--mainWhite);
+  background: var(--primaryColor);
+}
+
+/* ********************** End of Deals Section ********************** */
